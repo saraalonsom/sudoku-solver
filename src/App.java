@@ -1,18 +1,20 @@
 public class App {
 
 static int array_numeros[][] = {
-    {5, 3, 0, 0, 7, 0, 0, 0, 0},
-    {6, 0, 0, 1, 9, 5, 0, 0, 0},
-    {0, 9, 8, 0, 0, 0, 0, 6, 0},
-    {8, 0, 0, 0, 6, 0, 0, 0, 3},
-    {4, 0, 0, 8, 0, 3, 0, 0, 1},
-    {7, 0, 0, 0, 2, 0, 0, 0, 6},
-    {0, 6, 0, 0, 0, 0, 2, 8, 0},
-    {0, 0, 0, 4, 1, 9, 0, 0, 5},
-    {0, 0, 0, 0, 8, 0, 0, 7, 9}
+   {5, 3, 4, 6, 7, 8, 9, 0, 0},
+    {6, 7, 0, 0, 9, 5, 3, 4, 8},
+    {0, 9, 8, 3, 4, 0, 5, 6, 7},
+    {8, 5, 9, 7, 6, 0, 4, 0, 3},
+    {4, 0, 6, 8, 5, 3, 7, 9, 0},
+    {7, 0, 3, 9, 0, 4, 8, 5, 6},
+    {9, 6, 0, 5, 3, 7, 0, 8, 4},
+    {0, 8, 7, 4, 0, 9, 6, 3, 5},
+    {3, 4, 5, 0, 8, 6, 0, 7, 9}
 };    
 
 static int array_solucion[][] = new int[9][9];
+
+static boolean solutionFound = false;
 
     public static int cambiar_fila(int fila, int columna) {
         if (columna == 8) {
@@ -101,6 +103,7 @@ static int array_solucion[][] = new int[9][9];
     public static void resolver_sudoku(int fila, int columna) {
 
         if (fila > 8) {
+            solutionFound = true;
             System.out.println("----------------");
             for (int i = 0; i < 9; i++) {
                 for (int j = 0; j < 9; j++) {
@@ -138,6 +141,11 @@ static int array_solucion[][] = new int[9][9];
         int fila = 0;
         int columna = 0;
         resolver_sudoku(fila, columna);
+
+        if (!solutionFound) {
+            System.out.println("No se encontró solución.");
+        }
+
     }
-    
+
 }
