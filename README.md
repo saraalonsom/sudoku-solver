@@ -12,7 +12,8 @@ Key highlights of the project include:
 The focus of the repository is to **showcase how a classic search technique (backtracking) can be implemented in Java** and applied to a real-world puzzle-solving scenario.
 
 
-📌 **Project Overview**
+## 📌 **Project Overview**
+
 This project implements a Sudoku solver that accepts a 9×9 puzzle represented as a 2D array, where `0` denotes an empty cell. The algorithm recursively tests numbers from 1 to 9, checking whether each placement is valid according to Sudoku rules.
 
 If a placement is valid, the solver proceeds to the next cell. If not, it backtracks and tries a different number. This process continues until the puzzle is completely solved.
@@ -20,12 +21,12 @@ If a placement is valid, the solver proceeds to the next cell. If not, it backtr
 Unlike many Sudoku solvers, this version is designed to **output all possible valid solutions**. This makes it especially useful for testing puzzles that may be under-constrained or intentionally created with multiple solutions.
 
 
-⚙️ **Technologies Used**
+## ⚙️ **Technologies Used**
 
 * **Java (JDK 8+)** – primary programming language.
 * **VS Code** – tested for development and compilation.
 
-📊 **Features**
+## 📊 **Features**
 
 * Handles standard 9×9 Sudoku puzzles.
 * Detects and prints all valid solutions (not just one).
@@ -33,7 +34,8 @@ Unlike many Sudoku solvers, this version is designed to **output all possible va
 * Can be easily modified to accept different puzzles by editing the input array.
 
 
-👥 **Algorithm in Action**
+## 👥 **Algorithm in Action**
+
 The backtracking algorithm is the core of this solver:
 
 1. **Read the puzzle** from the predefined array.
@@ -46,7 +48,7 @@ The backtracking algorithm is the core of this solver:
 By not stopping at the first valid configuration, the solver can demonstrate when a Sudoku has multiple solutions—an important distinction in puzzle generation and testing.
 
 
-🚀 **Key Impact**
+## 🚀 **Key Impact**
 
 * Provides a **clear example** of recursive backtracking in Java.
 * Serves as a **teaching and learning tool** for algorithms and constraint satisfaction problems.
